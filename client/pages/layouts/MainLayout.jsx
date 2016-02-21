@@ -6,12 +6,10 @@ import {Footer} from '../../components/Footer.jsx';
 export const MainLayout = React.createClass({
     render() {
         return (
-            <div>
+            <div id="react-app">
                 <Header/>
                 <main>
-                    <div className="container">
-                        {this.props.content}
-                    </div>
+                    {this.props.content}
                 </main>
                 <Footer/>
             </div>

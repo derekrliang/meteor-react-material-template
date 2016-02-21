@@ -4,7 +4,7 @@
 
 // Stick footer for React apps
 #react-root {
-  > div[data-reactid] {
+  #react-app {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
