@@ -24,14 +24,14 @@ kadira:flow-router      # Routing
 
 fortawesome:fontawesome # Awesome font-cons
 
-accounts-password       # Creating user accounts
-accounts-ui
-
 fastclick               # Fastclick
 spiderable              # Crawling robots
 
 aldeed:collection2      # Database schema validation to Mongo
 
+accounts-password
+
 fourseven:scss          # SCSS
 standard-minifier-css
 standard-minifier-js
+react-meteor-data

@@ -1,10 +1,10 @@
 import React from 'react';
-import {Header} from '../../components/Header.jsx';
-
-import RaisedButton from 'material-ui/lib/raised-button';
 
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import AppTheme from '../../styles/theme.js';
+
+import {Header} from '../../components/Header.jsx';
+import {Footer} from '../../components/Footer.jsx';
 
 export const MainLayout = React.createClass({
     //the key passed through context must be called "muiTheme"
@@ -24,8 +24,8 @@ export const MainLayout = React.createClass({
         return (
             <div>
                 <Header/>
-                <RaisedButton label="My Button" primary={true} />
                 {this.props.content}
+                <Footer/>
             </div>
         );
     }
