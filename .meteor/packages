@@ -30,8 +30,6 @@ accounts-ui
 fastclick               # Fastclick
 spiderable              # Crawling robots
 
-erasaur:meteor-lodash   # Swiss army knife
-
 aldeed:collection2      # Database schema validation to Mongo
 
 fourseven:scss          # SCSS
