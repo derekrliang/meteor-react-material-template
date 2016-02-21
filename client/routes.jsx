@@ -1,19 +1,16 @@
 import React from 'react';
-import {MainLayout, MainLayoutTwo} from './pages/layouts/MainLayout.jsx';
+import {MainLayout} from './pages/layouts/MainLayout.jsx';
 import {MaterialLayout} from './pages/layouts/MaterialLayout.jsx';
 import {Home} from './pages/Home.jsx';
 import {mount} from 'react-mounter';
-
-// Test Layout
-import {TestLayout, Welcome, Hello, HelloReact} from './pages/layouts/TestLayout.jsx';
-
+h
 publicRoutes = FlowRouter.group({
     name: 'publicroute'
 });
 
 publicRoutes.route('/', {
     action() {
-        mount(MainLayoutTwo, {
+        mount(MainLayout, {
             content: <Home/>
         });
     }
@@ -23,19 +20,6 @@ publicRoutes.route('/material', {
     action() {
         mount(MaterialLayout, {
             content: <Home/>
-        });
-    }
-});
-
-publicRoutes.route('/test', {
-    action() {
-        console.log("test");
-        mount(TestLayout, {
-            content: (
-                <div>
-                    <HelloReact name="react"/>
-                </div>
-            )
         });
     }
 });

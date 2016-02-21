@@ -2,20 +2,11 @@ import React from 'react';
 import {Header} from '../../components/Header.jsx';
 
 import RaisedButton from 'material-ui/lib/raised-button';
-import AppBar from 'material-ui/lib/app-bar';
 
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import AppTheme from '../../styles/theme.js';
 
-export const MainLayout = ({content}) => (
-    <div>
-        <Header/>
-        <RaisedButton label="Default"/>
-        {content}
-    </div>
-);
-
-export const MainLayoutTwo = React.createClass({
+export const MainLayout = React.createClass({
     //the key passed through context must be called "muiTheme"
     childContextTypes: {
         muiTheme: React.PropTypes.object,
@@ -32,7 +23,7 @@ export const MainLayoutTwo = React.createClass({
     render() {
         return (
             <div>
-                <AppBar title="My AppBar" />
+                <Header/>
                 <RaisedButton label="My Button" primary={true} />
                 {this.props.content}
             </div>
