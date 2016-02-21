@@ -12,7 +12,7 @@ publicRoutes = FlowRouter.group({
 
 publicRoutes.route('/', {
     action() {
-        mount(MainLayout, {
+        mount(MainLayoutTwo, {
             content: <Home/>
         });
     }
