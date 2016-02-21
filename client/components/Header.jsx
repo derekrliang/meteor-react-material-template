@@ -1,7 +1,6 @@
 import React from 'react';
 import {ReactMeteorData} from 'meteor/react-meteor-data';
 
-import AppBar from 'material-ui/lib/app-bar';
 import {Login} from './Login.jsx';
 
 export const Header = React.createClass({
@@ -32,10 +31,17 @@ export const Header = React.createClass({
         }
 
         return (
-            <div>
-                <AppBar title="My AppBar"/>
-                {loginButton}
-            </div>
+            <nav>
+                <div className="nav-wrapper">
+                    <a href="/" className="brand-logo">Logo</a>
+                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                        {loginButton}
+                    </ul>
+                </div>
+            </nav>
         );
     }
 });
