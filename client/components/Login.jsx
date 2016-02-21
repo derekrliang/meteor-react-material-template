@@ -21,32 +21,36 @@ export class Login extends React.Component {
     render() {
         return (
             <div className="row">
-                <form className="col s12" onSubmit={this.onSubmit}>
+                <form className="card col m6 s12" onSubmit={this.onSubmit}>
                     <div className="row">
-                        <div className="input-field col s6">
+                        <div className="input-field col s12">
                             <input id="first_name" type="text" className="validate"/>
-                            <label for="first_name">First Name</label>
+                            <label htmlFor="first_name">First Name</label>
                         </div>
-                        <div className="input-field col s6">
+                    </div>
+                    <div className="row">
+                        <div className="input-field col s12">
                             <input id="last_name" type="text" className="validate"/>
-                            <label for="last_name">Last Name</label>
+                            <label htmlFor="last_name">Last Name</label>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="email" type="email" className="validate"/>
-                            <label for="email">Email</label>
+                            <label htmlFor="email">Email</label>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="password" type="password" className="validate"/>
-                            <label for="password">Password</label>
+                            <label htmlFor="password">Password</label>
                         </div>
                     </div>
-                    <button className="btn waves-effect waves-light" type="submit" name="action">Submit
-                        <i className="material-icons right">send</i>
-                    </button>
+                    <div className="card-action">
+                        <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i className="material-icons right">send</i>
+                        </button>
+                    </div>
                 </form>
             </div>
         );

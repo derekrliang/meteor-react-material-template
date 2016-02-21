@@ -8,9 +8,11 @@ export const MainLayout = React.createClass({
         return (
             <div>
                 <Header/>
-                <div className="container">
-                    {this.props.content}
-                </div>
+                <main>
+                    <div className="container">
+                        {this.props.content}
+                    </div>
+                </main>
                 <Footer/>
             </div>
         );

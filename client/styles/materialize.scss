@@ -1,0 +1,16 @@
+// -----------
+// Material CSS Overrides
+// -----------
+
+// Stick footer for React apps
+#react-root {
+  > div[data-reactid] {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
+
+main {
+  flex: 1 0 auto;
+}
