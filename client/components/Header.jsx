@@ -1,7 +1,7 @@
 import React from 'react';
 import {ReactMeteorData} from 'meteor/react-meteor-data';
 
-import {Login} from './Login.jsx';
+import {Login} from './Auth.jsx';
 
 export const Header = React.createClass({
     mixins: [ReactMeteorData],
@@ -17,17 +17,23 @@ export const Header = React.createClass({
     },
 
     render() {
-        let loginButton;
+
+        // Display login and register buttons if not signed in
+        let loginButton, registerButton;
         let { currentUser } = this.data;
 
         if (currentUser) {
             loginButton = (
                 <li><a href="#" onClick={this.handleLogout}>Logout</a></li>
-            )
+            );
         } else {
             loginButton = (
                 <li><a href="/login">Login</a></li>
-            )
+
+            );
+            registerButton = (
+                <li><a href="/register">Register</a></li>
+            );
         }
 
         return (
@@ -40,6 +46,7 @@ export const Header = React.createClass({
                             <li><a href="badges.html">Components</a></li>
                             <li><a href="collapsible.html">JavaScript</a></li>
                             {loginButton}
+                            {registerButton}
                         </ul>
                     </div>
                 </nav>
