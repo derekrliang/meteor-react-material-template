@@ -2,3 +2,4 @@
 .fuse*
 node_modules
 .meteor/local
+._*
