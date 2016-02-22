@@ -14,12 +14,12 @@ export class Login extends React.Component {
             } else {
                 FlowRouter.go('home');
             }
-        })
+        });
     }
 
     render() {
         return (
-            <div className="row">
+            <div className="row container">
                 <form className="card col m6 s12" onSubmit={this.onSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
@@ -50,34 +50,35 @@ export class Register extends React.Component {
         event.preventDefault();
 
         let self = this;
+        let username = $(event.target).find('#username').val();
         let email = $(event.target).find('#email').val();
         let password = $(event.target).find('#password').val();
-        let firstname = $(event.target).find('#first_name').val();
-        let lastname = $(event.target).find('#last_name').val();
 
-        Meteor.loginWithPassword(email, password, function(error) {
+        let options = { username, email, password };
+
+        Accounts.createUser(options, function(error) {
             if (error) {
                 console.log(error.reason);
             } else {
-                FlowRouter.go('home');
+                Meteor.loginWithPassword(email, password, function(error) {
+                    if (error) {
+                        console.log(error.reason);
+                    } else {
+                        FlowRouter.go('home');
+                    }
+                });
             }
-        })
+        });
     }
 
     render() {
         return (
-            <div className="row">
+            <div className="row container">
                 <form className="card col m6 s12" onSubmit={this.onSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="first_name" type="text" className="validate"/>
-                            <label htmlFor="first_name">First Name</label>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-field col s12">
-                            <input id="last_name" type="text" className="validate"/>
-                            <label htmlFor="last_name">Last Name</label>
+                            <input id="username" type="text" className="validate"/>
+                            <label htmlFor="username">Username</label>
                         </div>
                     </div>
                     <div className="row">
