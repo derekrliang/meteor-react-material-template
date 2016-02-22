@@ -1,8 +1,6 @@
 import React from 'react';
 import {ReactMeteorData} from 'meteor/react-meteor-data';
 
-import {Login} from './Auth.jsx';
-
 export const Header = React.createClass({
     mixins: [ReactMeteorData],
 

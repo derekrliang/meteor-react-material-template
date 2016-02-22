@@ -2,7 +2,7 @@ import React from 'react';
 
 import {MainLayout} from './pages/layouts/MainLayout.jsx';
 import {Home} from './pages/Home.jsx';
-import {Login, Register} from './components/Auth.jsx';
+import {Login, Register} from './pages/Auth.jsx';
 import {mount} from 'react-mounter';
 
 publicRoutes = FlowRouter.group({
