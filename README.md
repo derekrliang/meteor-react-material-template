@@ -13,6 +13,16 @@ Currently based on the latest and greatest (experimental) version of Meteor:
 * Example usage of Materialize components and design 
 * Basic group-based routing using FlowRouter (meteor)
 
+### Getting Started
+
+```
+$ git clone --depth=1 https://github.com/derekrliang/meteor-react-material-template.git MyApp
+$ rm -rf !$/.git
+$ cd MyApp
+$ npm install
+$ meteor
+```
+
 ### Objective
 * Explore the newest version of Meteor and find bugs/defects.
 * Establish a template for new Meteor projects that hope to baseline on the latest baseline.
