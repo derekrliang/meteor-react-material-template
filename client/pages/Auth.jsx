@@ -1,5 +1,11 @@
 import React from 'react';
 
+let styles = {
+    form: {
+        marginTop: '150'
+    }
+};
+
 export class Login extends React.Component {
     onSubmit(event) {
         event.preventDefault();
@@ -18,9 +24,10 @@ export class Login extends React.Component {
     }
 
     render() {
+
         return (
             <div className="row container">
-                <form className="card col m6 s12" onSubmit={this.onSubmit}>
+                <form className="card col offset-m3 m6 s12" style={styles.form} onSubmit={this.onSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="email" type="email" className="validate"/>
@@ -74,7 +81,7 @@ export class Register extends React.Component {
     render() {
         return (
             <div className="row container">
-                <form className="card col m6 s12" onSubmit={this.onSubmit}>
+                <form className="card col offset-m3 m6 s12" style={styles.form} onSubmit={this.onSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="username" type="text" className="validate"/>
