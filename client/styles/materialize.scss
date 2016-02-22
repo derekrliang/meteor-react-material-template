@@ -19,3 +19,8 @@ main {
 footer.page-footer {
   margin-top: 0px;
 }
+
+// Match icons with font size
+.icon-block .material-icons {
+  font-size: inherit;
+}
